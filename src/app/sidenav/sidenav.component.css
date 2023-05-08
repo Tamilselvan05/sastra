@@ -1,0 +1,60 @@
+.mainContent{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidenavigate{
+    width: 15%;
+    height: 100%;
+}
+
+.container-style{
+    width:100vw ;
+    /* background-color: yellow; */
+    overflow: hidden;
+    height:100vh;
+}
+
+ul li:hover a{
+    padding-left: 14px;
+    }
+
+ul{
+    display: block;
+    list-style-type: none;
+    list-style: none;
+    /* background-color: cornsilk; */
+}
+
+li a{
+    text-decoration: none;
+    padding: 18px;
+color: black;
+    display: block;
+    font-size: 15px;
+}
+
+i{
+    /* width: 20px; */
+    text-align: center;
+}
+.sidenav {
+    /* height: 100%; */
+    /* width: 160px; */
+    /* width: 18%; */
+    /* position: fixed; */
+    /* z-index: 1; */
+    /* margin-top: -20px; */
+    /* left: 0; */
+    background-color:pink;
+    overflow-x: hidden;
+    font-size: 14px;
+    /* padding-top: 16px; */
+  }
+  .cardSize{
+    width: 100%;
+  }
+
+  

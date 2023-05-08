@@ -1,0 +1,63 @@
+
+<!-- <p class="ml-5">currentstud works!</p> -->
+
+<!-- <mat-form-field>
+
+    <input (keyup)="applyFilter($event.target.value)"  placeholder="filter">
+</mat-form-field> -->
+<div class="carding">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="regNo">
+      <mat-header-cell *matHeaderCellDef > Reg No. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.regNo}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef>Student Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> <img class="rounded-circle mr-2"  width="25"> {{element.name}} </mat-cell>
+    </ng-container>
+    <!-- src="https://i.imgur.com/0LKZQYM.jpg" -->
+    <!-- Weight Column -->
+    <ng-container matColumnDef="yearPassing">
+      <mat-header-cell *matHeaderCellDef> Current Year Student </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.yearPassing}} </mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="department">
+      <mat-header-cell *matHeaderCellDef> Department </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.department}} </mat-cell>
+    </ng-container>
+  
+<!--  -->
+<ng-container matColumnDef="Batch">
+    <mat-header-cell *matHeaderCellDef > Action/Reject </mat-header-cell>
+    <mat-cell *matCellDef="let element"><span><i class="green-color fa-solid fa-circle-check fa-xl"></i><i
+      class="red-color ml-3 fa-solid fa-circle-xmark fa-xl"></i></span>  </mat-cell>
+  </ng-container>
+  <!--  -->
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <!-- <div class="form-group inner-addon right-addon">
+    <div class="input-group col-6 mx-auto">
+      <input name="password"
+          [type]="showPassword ? 'text' : 'password'"
+          class="form-control pwd-control"
+          id="password-field" placeholder="Password">
+      <div>
+        <i alt="show" class="far fa-eye eye-show" 
+        (click)="showPassword = !showPassword"
+        [class.hide]="showPassword"></i>
+        <i alt="hide" class="far fa-eye-slash eye-hide" 
+        (click)="showPassword = !showPassword"
+        [class.hide]="!showPassword"></i>
+      </div>
+    </div>
+  </div> -->
+  <mat-paginator #paginator [length]="100" [pageSizeOptions]="[3,5, 10]" showFirstLastButtons aria-label="select page"></mat-paginator>
+  
+</div>

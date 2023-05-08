@@ -1,0 +1,83 @@
+<!-- <p>testing works!</p> -->
+<!-- px full take the place -->
+
+<nav>
+    <div class="d-flex col-md-12 justify-content-between">
+
+        <img src="../assets/logo_sastra.png" alt="sastra" width="10%">
+
+
+
+        <div class="mt-2">
+            <!-- <img src="../assets/images.jfif" alt="error" class="rounded-circle" width="3%"/> -->
+
+            <p class="d-flex justify-content-end mt-2">
+                <img src="../assets/bellicon.png" class="rounded-circle px-2" width="4%">
+
+                <img src="../assets/dogpic.jpg" class="rounded-circle ml-5" width="3%">
+
+
+                <span class=" ml-2 d-flex flex-column">
+
+                    <span class="avtName pb-1">Tamilselvan</span>
+                    <button class="">administrator</button>
+                </span>
+            </p>
+        </div>
+        <!-- <img src="../assets/dogpic.jpg" class="rounded-circle" width="3%"><span>tamilselvan</span> -->
+        <!-- </div> -->
+    </div>
+</nav>
+<!-- kk -->
+<div class="col-md-12 p-0 d-flex vh-100 vw-100">
+    <!-- sidenav -->
+    <div class="col-md-2 px-0" style="background-color:pink;">
+        <div class="sidenav">
+            <ul>
+                <li class="ml-2" style="list-style-image:url(../assets/home.svg)"><a href="#">Posts</a></li>
+                <li class="ml-2" style="list-style-image: url(../assets/tickercheck.svg);"><a href="#">Past Student
+                        Request</a></li>
+                <li class="ml-2" style="list-style-image: url(../assets/presentall.svg);"><a href="#">Current Student
+                        Request</a></li>
+                <li class="ml-2" style="list-style-image: url(../assets/group.svg);"><a href="#">student List</a></li>
+                <li class="ml-2" style="list-style-image: url(../assets/settings.svg);"><a href="#">Settings</a></li>
+                <li class="ml-2" style="list-style-image: url(../assets/logout.svg);"><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- card -->
+    <div class="col-md-10" style="background-color:#2F2483;">
+        <!-- <input type="text" class="form-control" placeholder="email"> -->
+        <!-- <li class="" style="list-style-image:url(../assets/home.svg)"><a href="#">Posts</a></li> -->
+        <!-- <div class="row"> -->
+        <!-- <i class="material-icons">home</i> -->
+        <div class="row">
+
+            <i class="material-icons ml-4 mt-2" style="color:white ;">home</i>
+            <p class="mt-2 ml-1" style="font-size:16px; font-weight: bold; color: white;">Posts</p>
+        </div>
+
+        <!-- </div> -->
+
+        <div class="card mb-2" *ngFor="let x of data; let i = index">
+            <!-- <div class="card-header">
+          Featured
+        </div> -->
+            <div class="card-body">
+                <!-- <h5 class="card-title">Special title treatment</h5> -->
+                <img src="../assets/avt.jfif" class="rounded-circle-avt" width="2%">
+                <i class="material-icons pull-right" style="font-size:20px ;cursor: pointer;"
+                    (click)="delete(i)">delete</i>
+                <span style="color:#2F2483; font-size: 15px; font-weight: bold;"> Tamilselvan</span>
+                <h6 class="mt-1">opening for freshers from acer</h6>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content </p>
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+            <!-- <div class="card-footer text-muted">
+          2 days ago
+        </div> -->
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<!-- <p>paststudlist works!</p> -->
+<!--  -->
+
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-2">
+            <!-- Position Column -->
+            <ng-container matColumnDef="regNo">
+              <mat-header-cell *matHeaderCellDef > Reg No. </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.regNo}} </mat-cell>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef>Student Name </mat-header-cell>
+              <mat-cell *matCellDef="let element"> <img class="rounded-circle mr-2" src="https://i.imgur.com/0LKZQYM.jpg" width="25"> {{element.name}} </mat-cell>
+            </ng-container>
+          
+            <!-- Weight Column -->
+            <ng-container matColumnDef="yearPassing">
+              <mat-header-cell *matHeaderCellDef> Current Year Student </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.yearPassing}} </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="batch">
+                <mat-header-cell *matHeaderCellDef> Batch </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.batch}} </mat-cell>
+              </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="department">
+              <mat-header-cell *matHeaderCellDef> Department </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.department}} </mat-cell>
+            </ng-container>
+            <!--  -->
+            <ng-container matColumnDef="currentDesignation">
+                <mat-header-cell *matHeaderCellDef> Current Designation </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.currentDesignation}} </mat-cell>
+              </ng-container>
+        <!--  -->
+        <ng-container matColumnDef="companyName">
+            <mat-header-cell *matHeaderCellDef>Company Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.companyName}} </mat-cell>
+          </ng-container>
+
+        <ng-container matColumnDef="Action">
+            <mat-header-cell *matHeaderCellDef > Action </mat-header-cell>
+            <mat-cell *matCellDef="let element"><span><i class="green-color fa-solid fa-circle-check fa-xl"></i><i
+              class="red-color ml-3 fa-solid fa-circle-xmark fa-xl" (click)="delete(element)"></i></span>  </mat-cell>
+         
+          </ng-container>
+          <!--  -->
+        
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+
+  <mat-paginator #paginator [length]="100" [pageSizeOptions]="[3,5, 10]" showFirstLastButtons aria-label="select page"></mat-paginator>

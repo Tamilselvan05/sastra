@@ -1,0 +1,74 @@
+<!-- <p>studentlist works!</p> -->
+<!--  -->
+<!-- <p>paststud works!</p> -->
+
+
+<!-- <p>card works!</p> -->
+<!-- <div class="carding p-4 " style="background-color: #2F2483;">
+    <div class="row"> 
+      <i class="fa-solid fa-user-group  ml-4 mt-2" style="color:white;"></i>
+      <p class="mt-1 ml-2" style="font-size:16px; font-weight: bold; color: white;">Student List</p>
+      <mat-tab-group >
+        <mat-tab label="First">Content 1</mat-tab>
+        <mat-tab label="Second">Content 2</mat-tab>
+        <mat-tab label="Third">Content 3</mat-tab>
+      </mat-tab-group>
+    </div> 
+  </div> -->
+<div class="carding">
+
+    <mat-tab-group >
+      <mat-tab label="Current Student List"> 
+          <!-- Current Student List  -->
+  
+          <mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-2" >
+              <!-- Position Column -->
+              <ng-container matColumnDef="regNo">
+                <mat-header-cell *matHeaderCellDef > Reg No. </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.regNo}} </mat-cell>
+              </ng-container>
+            
+              <!-- Name Column -->
+              <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef>Student Name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> <img class="rounded-circle mr-2" src="https://i.imgur.com/0LKZQYM.jpg" width="25"> {{element.name}} </mat-cell>
+              </ng-container>
+            
+              <!-- Weight Column -->
+              <ng-container matColumnDef="yearPassing">
+                <mat-header-cell *matHeaderCellDef> Current Year Student </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.yearPassing}} </mat-cell>
+              </ng-container>
+            
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="department">
+                <mat-header-cell *matHeaderCellDef> Department </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.department}} </mat-cell>
+              </ng-container>
+            
+          <!--  -->
+          <ng-container matColumnDef="Batch" >
+              <mat-header-cell *matHeaderCellDef > Action </mat-header-cell>
+              <mat-cell *matCellDef="let element"><span> <i class="material-icons " style="font-size:20px ;cursor: pointer;"
+                (click)="delete(element)">delete</i></span>  </mat-cell>
+            </ng-container>
+            <!--  -->
+          
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+  
+  
+            <mat-paginator #paginator [length]="100" [pageSizeOptions]="[3,5, 10]" showFirstLastButtons aria-label="select page"></mat-paginator>
+  
+      </mat-tab>
+      <mat-tab label="Past Student List"> 
+          <!-- Past Student List  -->
+  
+  <app-paststudlist></app-paststudlist>
+  
+  
+      </mat-tab>
+    </mat-tab-group>
+    
+</div>

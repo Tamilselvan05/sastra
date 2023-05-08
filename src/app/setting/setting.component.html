@@ -1,0 +1,122 @@
+<!-- <p>setting works!</p> -->
+
+<!-- <p>card works!</p> -->
+<div class="carding p-5 " style="background-color: #2F2483;">
+    <div class="row">
+
+        <!-- <i class="material-icons ml-4 mt-2" style="color:white ;">home</i> -->
+        <i class="fa-solid fa-gear mt-3 fa-xl ml-4" style="color:white ;"></i>
+        <p class="mt-1 ml-2" style="font-size:16px;  color: white;">Settings</p>
+    </div>
+    <!-- </div> -->
+    <div class="card mb-5" vh="100">
+
+        <div class="card-body ">
+
+            <!-- <div class="row col-6">
+        <input type="text" class="form-control" placeholder="First name">
+        <input type="text" class="form-control" placeholder="First name">
+        <input type="text" class="form-control" placeholder="First name">
+        <div class=" col-6">
+            <input type="text" class="form-control" placeholder="First name">
+            <input type="text" class="form-control" placeholder="First name">
+            <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+    </div> -->
+            <!--  -->
+            <!-- <div class="row justify-content-between">
+        <div class="col-6">
+            <label>tail</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+        <div class="col-6">
+            <label>tail</label>
+
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+        </div>
+      </div> -->
+            <!--  -->
+            <div class="row mt-5">
+                <div class="col-6">
+                    <label class="ml-2">Current UserName</label>
+
+                    <mat-form-field appearance="fill" style="width:38vw">
+                        <mat-label>Current UserName</mat-label>
+                        <input class="p-2" [(ngModel)]="settingObj.currentUserName" matInput type="email" name="email">
+                    </mat-form-field>
+                </div>
+                <div class="col-6">
+                    <label class="ml-2">Current Password</label>
+                    <mat-form-field appearance="fill" style="width:38vw">
+                        <mat-label>Current Password</mat-label>
+                        <input class="p-2" [(ngModel)]="settingObj.currentPassword" matInput
+                            [type]="showPassword ? 'text' : 'password'" name="password">
+                        <mat-icon matSuffix (click)="togglePasswordVisibility()">
+                            {{showPassword?'visibility_off':'visibility'}}
+                        </mat-icon>
+                    </mat-form-field>
+                </div>
+            </div>
+            <!--  -->
+            <div class="row mt-5">
+                <div class="col-6">
+                    <label class="ml-2">New UserName</label>
+
+                    <mat-form-field appearance="fill" style="width:38vw">
+                        <mat-label>New UserName</mat-label>
+                        <input class="p-2" [(ngModel)]="settingObj.newUserName" matInput type="email" name="email">
+                    </mat-form-field>
+                </div>
+                <div class="col-6">
+                    <label class="ml-2">New Password</label>
+                    <mat-form-field appearance="fill" style="width:38vw">
+                        <mat-label>New Password</mat-label>
+                        <input class="p-2" [(ngModel)]="settingObj.newPassword" matInput
+                            [type]="showPassword ? 'text' : 'password'" name="password">
+                        <mat-icon matSuffix (click)="togglePasswordVisibility()">
+                            {{showPassword?'visibility_off':'visibility'}}
+                        </mat-icon>
+                    </mat-form-field>
+
+                </div>
+            </div>
+            <!--  -->
+            <div class="row mt-5">
+                <div class="col-6">
+                    <label class="ml-2">Confirm UserName</label>
+
+                    <mat-form-field appearance="fill" style="width:38vw">
+                        <mat-label>Confirm UserName</mat-label>
+                        <input class="p-2" [(ngModel)]="settingObj.confirmUserName" matInput type="email" name="email">
+                    </mat-form-field>
+                </div>
+                <div class="col-6">
+                    <label class="ml-2">Confirm Password</label>
+                    <mat-form-field appearance="fill" style="width:38vw">
+                        <mat-label>Confirm Password</mat-label>
+                        <input class="p-2" [(ngModel)]="settingObj.confirmPassword" matInput
+                            [type]="showPassword ? 'text' : 'password'" name="password">
+                        <mat-icon matSuffix (click)="togglePasswordVisibility()">
+                            {{showPassword?'visibility_off':'visibility'}}
+                        </mat-icon>
+                    </mat-form-field>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+
+                <!-- <button type="submit" class="btn btn-primary pull-right p-3">Sign in</button> -->
+                <button type="button" (click)="settingForm()" class="btn btn-primary btn-lg pull-right ">Save</button>
+            </div>
+            <!--  -->
+            <div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

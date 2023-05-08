@@ -1,0 +1,32 @@
+<div class="mainContent ">
+    <div class="sidenavigate shadow">
+        <ul>
+            <li class="ml-2" style="list-style-image:url(../assets/home.svg)"><a  routerLink="card">Posts</a></li>
+            <li class="ml-2" style="list-style-image: url(../assets/tickercheck.svg);"><a  routerLink="paststud">Past Student
+                    Requestss</a></li>
+            <!-- <li class="ml-2" style="list-style-image: url(../assets/presentall.svg);"><a routerLink="currentstud">Current Student                  Request</a></li> -->
+            <li class="ml-2" style="list-style-image: url(../assets/group.svg);"><a routerLink="studentlist">student List</a></li>
+            <li class="ml-2" style="list-style-image: url(../assets/settings.svg);"><a routerLink="setting">Settings</a></li>
+            <li class="ml-2" style="list-style-image: url(../assets/logout.svg);"><a routerLink="logout">Logout</a></li>
+            <li class="ml-2" style="list-style-image: url(../assets/presentall.svg);"><a routerLink="pststudpost">Create Post</a></li>
+            <li class="ml-2" style="list-style-image: url(../assets/tickercheck.svg);"><a routerLink="postliist">Post list</a></li>
+            <li class="ml-2" style="list-style-image: url(../assets/group.svg);"><a routerLink="register">Register</a></li>
+
+            
+
+
+            <!-- postliist -->
+        
+        </ul>
+    </div>       
+      <!-- <app-post></app-post> -->
+      <div class="cardSize">
+
+          <router-outlet></router-outlet>
+          <!-- <app-card></app-card> -->
+          <!-- <app-setting></app-setting> -->
+          <app-card></app-card>
+          <!-- <app-pststudpost></app-pststudpost>  -->
+          <!-- <app-currentstud></app-currentstud> -->
+      </div>
+</div>

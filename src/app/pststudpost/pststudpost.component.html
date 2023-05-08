@@ -1,0 +1,33 @@
+<div class="carding p-5 " style="background-color: #2F2483;">
+    <div class="row">
+    </div>
+    <div class="card mb-5" vh="100">
+        <div class="card-body ">
+            <h2 align="center">Create Post</h2>
+            <hr style="background-color:black;">
+            <div class="matsize mt-5">
+                <mat-form-field appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <input matInput [(ngModel)]="pststudpost.title" placeholder="Placeholder" >
+
+                </mat-form-field>
+            </div>
+            <div class="texting mt-5">
+                <mat-form-field class="field2" appearance="outline">
+                    <mat-label style="font-weight: bold;">Textarea</mat-label>
+                    <textarea matInput [(ngModel)]="pststudpost.description" class="clrrr"></textarea>
+                </mat-form-field>
+            </div>
+            <hr style="background-color:black;" class="hrline">
+            <!-- <mat-form-field class="field2" floatLabel="always" hideRequiredMarker appearance="outline">
+                <mat-label style="font-weight: bold;">Description</mat-label>
+                <input matInput placeholder="Type your body text"required />
+              </mat-form-field> -->
+            <div class="mt-5">
+                <button type="button" (click)="pastStudPost()" class="btn btn-primary btn-lg pull-right ">Save</button>
+            </div>
+            <div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.carding{
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+}
+
+
+.avtName{
+    font-size: 13px;
+    /* color: brown; */
+}
+
+.rounded-circle-avt{
+    border-radius: 13px;
+    height: 24px;
+}

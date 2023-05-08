@@ -1,0 +1,29 @@
+<p>postliist works!</p>
+<!--  -->
+<!-- <p>card works!</p> -->
+<div class="carding p-4 " style="background-color: #2F2483;">
+    <div class="row">
+
+        <i class="material-icons ml-4 mt-2" style="color:white ;">home</i>
+        <p class="mt-2 ml-1" style="font-size:16px; font-weight: bold; color: white;">Posts</p>
+    </div>
+    <!-- </div> -->
+    <div class="card mb-5" *ngFor="let x of users.data; let i = index">
+        <!-- <div class="card-header">
+      Featured
+    </div> -->
+        <div class="card-body">
+            <!-- <h5 class="card-title">Special title treatment</h5> -->
+            <img src="../assets/avt.jfif" class="rounded-circle-avt" width="2%">
+            <i class="material-icons pull-right" style="font-size:20px ;cursor: pointer;"
+                (click)="delete(i)">delete</i>
+            <span style="color:#2F2483; font-size: 15px; font-weight: bold;"> {{x.name}}</span>
+            <h6 class="mt-1">{{x.title}}</h6>
+            <p class="card-text">{{x.description}} </p>
+            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+        <!-- <div class="card-footer text-muted">
+      2 days ago
+    </div> -->
+    </div>
+</div>

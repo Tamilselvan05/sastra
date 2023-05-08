@@ -1,0 +1,69 @@
+<!-- <p>register works!</p> -->
+
+<div class="body">
+    <div class="container-card">
+      <div class="image">
+        
+        <img src="../assets/logo_sastra.png" alt="sastra logo" width="150" height="50">
+        <p>Register your <span  style="color: rgb(16, 71, 153);">Sastra </span>account</p>
+        <hr>
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="pststudregister.passedOutStudent">
+          <mat-radio-button value="1" color="primary" class="ml-5"><b>I'm pasted-out student</b></mat-radio-button>
+          <!-- <mat-radio-button value="2" color="primary" style="margin-left: 50px;"><b >I'm current student</b></mat-radio-button> -->
+        </mat-radio-group><br>
+        <mat-form-field class="field" floatLabel="always" hideRequiredMarker appearance="outline">
+          <mat-label style="font-weight: bold; color: black;">Name</mat-label>
+          <input matInput placeholder="Enter your name"required  [(ngModel)]="pststudregister.name"/>
+        </mat-form-field>
+        <mat-form-field class="field1" floatLabel="always" hideRequiredMarker appearance="outline">
+          <mat-label style="font-weight: bold; color: black;">Mail Id</mat-label>
+          <input matInput placeholder="Enter your mail id"required  [(ngModel)]="pststudregister.email"/>
+        </mat-form-field>
+        <mat-form-field class="field2" floatLabel="always" hideRequiredMarker appearance="outline">
+          <mat-label style="font-weight: bold; color: black;">Departmkent</mat-label>
+          <input matInput placeholder="Enter your departmkent"required [(ngModel)]="pststudregister.department"/>
+        </mat-form-field>
+  
+        <mat-form-field class="field3" floatLabel="always" hideRequiredMarker appearance="outline">
+          <mat-label style="font-weight: bold; color: black;">Year of Passing</mat-label>
+          <input matInput placeholder="Enter year of passing"required  [(ngModel)]="pststudregister.yearOfPassing"/>
+        </mat-form-field>
+        <mat-form-field class="field4" floatLabel="always" hideRequiredMarker appearance="outline">
+          <mat-label style="font-weight: bold; color: black;">Batch</mat-label>
+          <input matInput placeholder="Enter your batch year"required [(ngModel)]="pststudregister.batch"/>
+        </mat-form-field>
+        <mat-form-field class="field5" floatLabel="always" hideRequiredMarker appearance="outline">
+          <mat-label style="font-weight: bold; color: black;">Designation</mat-label>
+          <input matInput placeholder="Enter your current designation"required [(ngModel)]="pststudregister.designation"/>
+        </mat-form-field>
+  
+        <mat-form-field class="field6" floatLabel="always" hideRequiredMarker appearance="outline">
+          <mat-label style="font-weight: bold; color: black;">Company name</mat-label>
+          <input matInput placeholder="Enter year current company name"required [(ngModel)]="pststudregister.companyName"/>
+        </mat-form-field>
+        
+  
+  
+        
+          <mat-form-field  class="field7" floatLabel="always" hideRequiredMarker appearance="outline">
+            <mat-label style="font-weight: bold; color: black;">Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" [(ngModel)]="pststudregister.password">
+            <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon style="outline: none;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+  
+          <mat-form-field  class="field8" floatLabel="always" hideRequiredMarker appearance="outline">
+            <mat-label style="font-weight: bold; color: black;">Confirm Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" [(ngModel)]="pststudregister.confirmPassword">
+            <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon style="outline: none;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+      </div>
+      <hr>
+      <button class="but" (click)="registerForm()">
+        Register
+      </button>
+    </div>
+  </div>

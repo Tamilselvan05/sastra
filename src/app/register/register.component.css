@@ -1,0 +1,53 @@
+.body
+{
+    background-color: #2F2483;
+    height: 100%;
+}
+.container-card
+{
+    height: 650px;
+    /* /* height: 600px; */
+    /* width: 1200px; */ 
+    background-color: white;
+    /* position: absolute;
+    top:30px;
+    left:70px;
+    border-radius: 10px; */
+}
+img
+{
+    margin: 20px;
+    margin-left: 500px;
+}
+p
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 450px;
+}
+hr
+{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.radio
+{
+    font-size: 15px;
+    font-weight: bold;
+}
+.field,.field1,.field2,.field3,.field4,.field5,.field6,.field7,.field8
+{
+    margin: 20px;
+    width: 350px;
+}
+.but
+{
+    height:35px;
+    width: 130px;
+    margin-left: 1010px;
+    border-radius: 5px;
+    font: 20px;
+    color: aliceblue;
+    background-color: rgb(27, 69, 158);
+    margin-top: 10px;
+}

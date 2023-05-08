@@ -1,0 +1,29 @@
+.carding{
+    width: 100%;
+    height: 100%;
+}
+
+/* icon color  change */
+.green-color {
+    color:green;
+}
+.red-color {
+  color: red;
+}
+
+/* mat-header-cell, mat-cell {
+    justify-content: center;
+  } */
+
+  
+.mat-cell {
+    text-align: center;
+    justify-content:center;
+  }
+
+  mat-header-cell {
+    justify-content: center;
+    background-color: #2F2483;
+    color: white;
+
+  }
