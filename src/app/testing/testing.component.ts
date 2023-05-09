@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-testing',
@@ -6,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./testing.component.css']
 })
 export class TestingComponent implements OnInit {
-  router: any;
+  // router: any;
 
-  constructor() { }
+  constructor(public api:ApiService , private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -25,8 +27,8 @@ export class TestingComponent implements OnInit {
   }
 
   loginOut(){
-
-    this.router.navigate(['/logout'])
+this.api.isLoggedIn = false;
+    this.router.navigate(['/card'])
     console.log("chkkkkkkkk");
     
   }

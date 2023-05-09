@@ -66,9 +66,14 @@
   
 </div> -->
 
+<div *ngIf="api.isLoggedIn">
 
+  <app-testing></app-testing>
+  <!-- <router-outlet></router-outlet> -->
+</div>
+<div *ngIf ="!api.isLoggedIn">
+  <app-logout></app-logout>
+</div>
 <!-- <app-form></app-form> --> 
-<app-testing></app-testing>
 <!-- <app-logout></app-logout> -->
 <!-- <app-studentlist></app-studentlist> -->
-<router-outlet></router-outlet>
