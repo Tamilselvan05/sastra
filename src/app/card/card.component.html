@@ -6,7 +6,7 @@
         <p class="mt-2 ml-1" style="font-size:16px; font-weight: bold; color: white;">Posts</p>
     </div>
     <!-- </div> -->
-    <div class="card mb-5" *ngFor="let x of data; let i = index">
+    <div class="card mb-5" *ngFor="let x of users.data; let i = index">
         <!-- <div class="card-header">
       Featured
     </div> -->
@@ -15,9 +15,12 @@
             <img src="../assets/avt.jfif" class="rounded-circle-avt" width="2%">
             <i class="material-icons pull-right" style="font-size:20px ;cursor: pointer;"
                 (click)="delete(i)">delete</i>
+            <!-- <span style="color:#2F2483; font-size: 15px; font-weight: bold;"> {{x.name}}</span> -->
+           <div>
             <span style="color:#2F2483; font-size: 15px; font-weight: bold;"> {{x.name}}</span>
-            <h6 class="mt-1">opening for freshers from acer</h6>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content </p>
+           </div>
+            <h6 class="mt-1">{{x.title}}</h6>
+            <p class="card-text">{{x.description}}</p>
             <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
         <!-- <div class="card-footer text-muted">

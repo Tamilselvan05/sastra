@@ -7,7 +7,9 @@ import { ApiService } from '../api.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-
+  users:any
+  user:any
+naming:any
   constructor(public api:ApiService) { }
 
   data = [
@@ -17,8 +19,7 @@ export class CardComponent implements OnInit {
     {name:"prethika", type:"three"},
     {name:"Megala", type:"three"},
     {name:"Nandhini", type:"three"},
-    
-    
+  
   ];
   // datas = {
   //   currentUserName: "",
@@ -32,10 +33,22 @@ export class CardComponent implements OnInit {
 
   postObj={}
   ngOnInit(): void {
-    // this.api.adminPost(this.datas).subscribe((data: any) => {
+    console.log(this.naming,'aaaaaaaaaaa')
+    this.api.paststudget().subscribe((data:any)=>{
+      this.users = data
+      // this.users = this.user
+       console.log(this.users,'carddata')
+    })
+
+    this.api.paststudgetRegister().subscribe((data:any)=>{
+      this.user = data
+      this.user.data.forEach((value: any) => {
+        console.log(value.name,'kkk')
+        this.naming= value.name
+      });
       
-    // });
-  //  console.log(this.)
+    })
+
   }
 
   // delete 

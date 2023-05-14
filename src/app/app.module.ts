@@ -31,6 +31,7 @@ import { RegisterComponent } from './register/register.component';
 import { PostliistComponent } from './postliist/postliist.component';
 // import{MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
+import { CurrentstudentregisterComponent } from './currentstudentregister/currentstudentregister.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import {MatRadioModule} from '@angular/material/radio';
     PaststudlistComponent,
     PststudpostComponent,
     RegisterComponent,
-    PostliistComponent
+    PostliistComponent,
+    CurrentstudentregisterComponent
   ],
   imports: [
     BrowserModule,

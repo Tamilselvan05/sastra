@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-paststud',
@@ -9,7 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class PaststudComponent implements AfterViewInit {
 
-  constructor() { }
+  constructor(public api : ApiService) { }
   displayedColumns: string[] = ['regNo', 'name', 'yearPassing','batch','department','currentDesignation','companyName', 'Action'];
   dataSource = new MatTableDataSource<studentElement>(ELEMENT_DATA);
   // headers = ['Reg No.', 'Student name', 'year of passing', 'Batch', 'Department', 'Current Desingnation', 'Company name', 'Action/Reject']
@@ -24,7 +25,18 @@ export class PaststudComponent implements AfterViewInit {
     console.log('jon')
     this.dataSource.data = this.dataSource.data.filter(i => i !== elm)
   }
+  ngOnInit(): void {
+    
+    this.api.paststudgetRegister().subscribe((data:any)=>{
+     console.log(data,'ggg')
+    //  this.dataSource = data
+    })
 
+    
+      
+  
+
+  }
   onAdd(index : any){
     // alert("hhh")
     // console.log(this.dataSource.data,'kkkkkkkkkkkkkk')
@@ -92,9 +104,12 @@ companyName:string
 
 
 const ELEMENT_DATA: studentElement[] = [
-  { regNo: 2015789694, name: "Shree", yearPassing: "2018",batch:"2020-2023", department:"computer sciense",currentDesignation:"SoftwareEngineer",companyName:"BnyMellon",action:"" },
-  { regNo: 2015789695, name: "Harini", yearPassing: "2018",batch:"2020-2023", department:"computer sciense" ,currentDesignation:"SoftwareEngineer",companyName:"BnyMellon",action: "gggg" ,},
-  { regNo: 2015789696, name: "Rasika", yearPassing: "2018",batch:"2020-2023", department:"computer sciense" ,currentDesignation:"SoftwareEngineer",companyName:"BnyMellon",action: "k" },
+  { regNo: 2015789694, name: "Shreekalaivathana", yearPassing: "2018",batch:"2020-2023", department:"computer sciense",currentDesignation:"SoftwareEngineer",companyName:"BnyMellon",action:"" },
+  { regNo: 2015789695, name: "shree", yearPassing: "2018",batch:"2020-2023", department:"computer sciense" ,currentDesignation:"SoftwareEngineer",companyName:"BnyMellon",action: "gggg" ,},
+  { regNo: 2015789696, name: "Harini", yearPassing: "2018",batch:"2020-2023", department:"computer sciense" ,currentDesignation:"SoftwareEngineer",companyName:"BnyMellon",action: "k" },
+  { regNo: 2015789696, name: "Rashika", yearPassing: "2018",batch:"2020-2023", department:"computer sciense" ,currentDesignation:"SoftwareEngineer",companyName:"BnyMellon",action: "k" },
+  { regNo: 2015789696, name: "Riya", yearPassing: "2018",batch:"2020-2023", department:"computer sciense" ,currentDesignation:"SoftwareEngineer",companyName:"BnyMellon",action: "k" },
+
   // { regNo: 2015789697, name: "Riyashre", yearPassing: "2018",batch:"2020-2023", department:"computer sciense" ,currentDesignation:"SoftwareEngineer",companyName:"BnyMellon",action: "hh" }
 
 

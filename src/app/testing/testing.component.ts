@@ -10,14 +10,14 @@ import { ApiService } from '../api.service';
 export class TestingComponent implements OnInit {
   // router: any;
 
-  constructor(public api:ApiService , private router:Router) { }
+  constructor(public api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
   }
   data = [
-    {name:"tamil", type:"one"},
-    {name:"johnwick", type:"two"},
-    {name:"kavin", type:"three"},
+    { name: "tamil", type: "one" },
+    { name: "johnwick", type: "two" },
+    { name: "kavin", type: "three" },
   ];
 
 
@@ -26,11 +26,13 @@ export class TestingComponent implements OnInit {
     this.data.splice(index, 1);
   }
 
-  loginOut(){
-this.api.isLoggedIn = false;
-    this.router.navigate(['/card'])
+  loginOut() {
+    this.api.isLoggedIn = false;
+    this.api.isAdminLOgin = false;
+
+    this.router.navigate(['/logout'])
     console.log("chkkkkkkkk");
-    
+
   }
- 
+
 }

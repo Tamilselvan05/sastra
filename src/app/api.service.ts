@@ -17,11 +17,17 @@ public pastStudUrl = this.baseUrl + "/user/pststudposting"
 
 public pastStudget = this.baseUrl + "/user/getAllUser"
 
+public pastStudgetRegister = this.baseUrl + "/user/getAllUserRegister"
+
+
 public pastStudRegisterUrl = this.baseUrl + "/user/pastStudRegister"
 
 public pastStudRegisterDelete = this.baseUrl + "/user/delete"
 
 public adminLoginUrl= this.baseUrl + "/user/adminLogin"
+
+public currentStudentUrl= this.baseUrl + "/user/currentStudentRegister"
+
 
  isAdminLOgin = false;
 //  public registrationUrl = this.baseUrl + "/user/registration"
@@ -46,22 +52,31 @@ paststudpost(pstObj:any){
 }
 // get
 
+pastStudRegister(pststudregister:any){
+  return this.http.post<any>(this.pastStudRegisterUrl, pststudregister)
+}
+
+registerDelete(){
+  return this.http.delete<any>(this.pastStudRegisterDelete)
+}
+
+adminLogin(adminObj:any){
+  // return this.http.post<any>(this.adminLoginUrl)
+  return this.http.post<any>(this.adminLoginUrl, adminObj)
+}
+
 paststudget(){
   console.log(this.test,'jjjjjj')
   return this.http.get<any>(this.pastStudget)
 }
 
-pastStudRegister(pststudregister:any){
-  return this.http.post<any>(this.pastStudRegisterUrl, pststudregister)
+paststudgetRegister(){
+  console.log(this.test,'jjjjjj')
+  return this.http.get<any>(this.pastStudgetRegister)
 }
- registerDelete(){
-  return this.http.delete<any>(this.pastStudRegisterDelete)
- }
+currentStudentRegister(currentstud:any){
+  return this.http.post<any>(this.currentStudentUrl, currentstud)
 
-
- adminLogin(adminObj:any){
-  // return this.http.post<any>(this.adminLoginUrl)
-  return this.http.post<any>(this.adminLoginUrl, adminObj)
- }
+}
 
 }

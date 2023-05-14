@@ -1,19 +1,14 @@
 ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-    /* color:blue; */
+    color:blue;
     /* background-color: #2F2483; */
     }
     
     ::ng-deep .mat-tab-list .mat-tab-labels {
-    /* color:blue; */
+    color:blue;
     /* background-color: #2F2483; */
     
     }
     /*  */
-.carding{
-    width: 100%;
-    height: 100%;
-    overflow-x: scroll;
-}
 
 .body
 {

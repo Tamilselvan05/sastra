@@ -1,0 +1,58 @@
+<!-- <p>currentstudentregister works!</p> -->
+<!--  -->
+<!-- <p>register works!</p> -->
+
+<div class="body">
+    <div class="container-card mt-4">
+      <div class="image">
+        
+        <!-- <img src="../assets/logo_sastra.png" alt="sastra logo" width="150" height="50"> -->
+        <p class="mt-5">Register your <span  style="color: rgb(16, 71, 153);">Sastra </span>account</p>
+        <hr class="mt-5">
+        <div class="row" >
+
+           
+    <!--  -->
+   : <mat-radio-group aria-label="Select an option" class="ml-2 mt-4" *ngIf="true" [(ngModel)]="currentStudentObj.currentStudent" >
+        <mat-radio-button value="2" color="primary" value="currentStudent" class="ml-5"><b>I'm current student</b></mat-radio-button>
+        <!-- <mat-radio-button value="2" color="primary" style="margin-left: 50px;"><b >I'm current student</b></mat-radio-button> -->
+      </mat-radio-group>
+        </div>
+        <!--  -->
+        <mat-form-field class="field mt-2" floatLabel="always" hideRequiredMarker appearance="outline">
+          <mat-label style="font-weight: bold; color: black;">Name</mat-label>
+          <input matInput placeholder="Enter your name"required  [(ngModel)]="currentStudentObj.name"/>
+        </mat-form-field>
+        <mat-form-field class="field1" floatLabel="always" hideRequiredMarker appearance="outline">
+          <mat-label style="font-weight: bold; color: black;">Mail Id</mat-label>
+          <input matInput placeholder="Enter your mail id"required  [(ngModel)]="currentStudentObj.email"/>
+        </mat-form-field>
+        <mat-form-field class="field2" floatLabel="always" hideRequiredMarker appearance="outline">
+          <mat-label style="font-weight: bold; color: black;">Department</mat-label>
+          <input matInput placeholder="Enter your departmkent"required [(ngModel)]="currentStudentObj.department"/>
+        </mat-form-field>
+          <mat-form-field  class="field7" floatLabel="always" hideRequiredMarker appearance="outline">
+            <mat-label style="font-weight: bold; color: black;">Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" [(ngModel)]="currentStudentObj.password">
+            <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon style="outline: none;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+  
+          <mat-form-field  class="field8" floatLabel="always" hideRequiredMarker appearance="outline">
+            <mat-label style="font-weight: bold; color: black;">Confirm Password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" placeholder="Enter your password" [(ngModel)]="currentStudentObj.confirmPassword">
+            <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon style="outline: none;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+      </div>
+      <hr>
+      <div *ngIf="currentStudentObj.email && currentStudentObj.name && currentStudentObj.currentStudent" >
+
+          <button class="but" (click)="registerForm()">
+            Register
+          </button>
+      </div>
+    </div>
+  </div>

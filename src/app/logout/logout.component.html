@@ -3,7 +3,7 @@
 <!-- <p>card works!</p> -->
 <!-- <div> -->
 
-    <div class="carding p-4 d-flex justify-content-center" style="background-color: #2F2483;">
+    <div class="carding p-4 d-flex justify-content-center" style="background-color: #2F2483; height:722px;">
         <div class="card " style="width:36% ;height: 70%; margin: auto;">
         <div class="d-flex justify-content-center mt-5">
             <img src="../assets/logo_sastra.png" alt="sastra" width="25%">
@@ -42,11 +42,13 @@
                 <div class="d-flex justify-content-end mt-3">
                     <p class="text-primary">Forget your password?</p>
                 </div>
-                <div>
+                <!-- <div *ngIf="admin.userName && admin.password"> -->
+                    <div>
                     <button (click)="loginSave()" class="btn btn-primary login-btn">Login</button>
                     <!-- <a routerLink="testing">Logout</a> -->
-        <!-- <button type="button" (click)="loginSave()" class="btn btn-primary">Sign-In</button> -->
-        <div class="d-flex justify-content-center mt-3">
+        </div>
+                    <!-- <button type="button" (click)="loginSave()" class="btn btn-primary">Sign-In</button> -->
+        <div class="d-flex justify-content-center mt-3"  >
             <!-- <a routerLink="register">Register</a> -->
             <!-- <li class="ml-2" style="list-style-image: url(../assets/tickercheck.svg);"><a routerLink="postlist">Post list</a></li> -->
 
@@ -55,7 +57,7 @@
             <!-- <button class="nav-item nav-link-edit" [routerLink]="['card']">Home</button > -->
         </div>
         <!-- <router-outlet></router-outlet> -->
-                </div>
+                <!-- </div> -->
             </div>
 
         </div>

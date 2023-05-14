@@ -8,6 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class PststudpostComponent implements OnInit {
   pststudpost = {
+    name:"",
     title: "",
     description: "",
   };
@@ -20,6 +21,8 @@ pastStudPost(){
   this.api.paststudpost(this.pststudpost).subscribe((data: any) => {
     console.log(data)
   })
+  this.pststudpost.name =""
+
   this.pststudpost.title =""
 this.pststudpost.description =""
 

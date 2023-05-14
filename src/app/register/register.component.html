@@ -1,16 +1,29 @@
-<!-- <p>register works!</p> -->
 
-<div class="body">
+<div class="carding">
+    <mat-tab-group >
+        <mat-tab label="PassedOut StudentRegistration"> 
+            <!-- <p>register works!</p> -->
+
+<div class="body mt-4">
     <div class="container-card">
       <div class="image">
         
-        <img src="../assets/logo_sastra.png" alt="sastra logo" width="150" height="50">
+        <!-- <img src="../assets/logo_sastra.png" alt="sastra logo" width="150" height="50"> -->
         <p>Register your <span  style="color: rgb(16, 71, 153);">Sastra </span>account</p>
-        <hr>
-        <mat-radio-group aria-label="Select an option" [(ngModel)]="pststudregister.passedOutStudent">
-          <mat-radio-button value="1" color="primary" class="ml-5"><b>I'm pasted-out student</b></mat-radio-button>
-          <!-- <mat-radio-button value="2" color="primary" style="margin-left: 50px;"><b >I'm current student</b></mat-radio-button> -->
-        </mat-radio-group><br>
+        <!-- <hr> -->
+        <div class="row" >
+
+            <mat-radio-group aria-label="Select an option" class="ml-2" [(ngModel)]="pststudregister.passedOutStudent">
+              <mat-radio-button value="1" color="primary" value="passedOutStudent" class="ml-5"><b>I'm pasted-out student</b></mat-radio-button>
+              <!-- <mat-radio-button value="2" color="primary" style="margin-left: 50px;"><b >I'm current student</b></mat-radio-button> -->
+            </mat-radio-group><br>
+    <!--  -->
+    <!-- <mat-radio-group aria-label="Select an option" *ngIf="true" [(ngModel)]="currentStudentObj.currentStudent" >
+        <mat-radio-button value="2" color="primary" value="currentStudent" class="ml-5"><b>I'm current student</b></mat-radio-button>
+        <!-- <mat-radio-button value="2" color="primary" style="margin-left: 50px;"><b >I'm current student</b></mat-radio-button> -->
+      <!-- </mat-radio-group> --> 
+        </div>
+        <!--  -->
         <mat-form-field class="field" floatLabel="always" hideRequiredMarker appearance="outline">
           <mat-label style="font-weight: bold; color: black;">Name</mat-label>
           <input matInput placeholder="Enter your name"required  [(ngModel)]="pststudregister.name"/>
@@ -36,11 +49,13 @@
           <mat-label style="font-weight: bold; color: black;">Designation</mat-label>
           <input matInput placeholder="Enter your current designation"required [(ngModel)]="pststudregister.designation"/>
         </mat-form-field>
-  
-        <mat-form-field class="field6" floatLabel="always" hideRequiredMarker appearance="outline">
-          <mat-label style="font-weight: bold; color: black;">Company name</mat-label>
-          <input matInput placeholder="Enter year current company name"required [(ngModel)]="pststudregister.companyName"/>
-        </mat-form-field>
+  <!-- <span *ngIf="pststudregister.currentStudent === 'false'" > -->
+    
+      <mat-form-field class="field6" floatLabel="always" hideRequiredMarker appearance="outline">
+        <mat-label style="font-weight: bold; color: black;">Company name</mat-label>
+        <input matInput placeholder="Enter year current company name"required [(ngModel)]="pststudregister.companyName"/>
+      </mat-form-field>
+  <!-- </span> -->
         
   
   
@@ -62,8 +77,28 @@
           </mat-form-field>
       </div>
       <hr>
-      <button class="but" (click)="registerForm()">
-        Register
-      </button>
+      <div *ngIf="pststudregister.email && pststudregister.name && pststudregister.passedOutStudent" >
+
+          <button class="but" (click)="registerForm()">
+            Register
+          </button>
+      </div>
     </div>
   </div>
+            
+            <!-- Past Student List  -->
+        </mat-tab>
+        <mat-tab label="Current StudentRegistration"> 
+            
+            <app-currentstudentregister></app-currentstudentregister>
+            
+            
+            <!-- Current Student List  -->
+      </mat-tab>
+      <!-- <mat-tab label="admin"> 
+    
+
+    </mat-tab> -->
+    </mat-tab-group>
+    
+</div>

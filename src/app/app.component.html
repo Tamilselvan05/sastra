@@ -20,7 +20,7 @@
     </div>
   </div>
   <!-- second row dec -->
-  <!-- <div class="row mt-2">
+<!-- <div class="row mt-2">
     <div class="col-sm-4">
       <label>Monthly Increment</label>
       <input type="text" class="form-control" placeholder="Please Enter the value">
@@ -32,8 +32,8 @@
     </div>
   </div> -->
 
-  <!-- table -->
-  <!-- <table class="table table-bordered mt-3">
+<!-- table -->
+<!-- <table class="table table-bordered mt-3">
     <thead>
       <tr>
         <th scope="col">No</th>
@@ -48,7 +48,7 @@
         <td></td>
         <td></td>
         <td></td>
-      </tr>
+      </tr>side
       <tr>
         <th scope="row">2</th>
         <td></td>
@@ -65,15 +65,16 @@
   </table>
   
 </div> -->
+<!-- <app-form></app-form> -->
+<!-- <app-logout></app-logout> -->
+<!-- <app-studentlist></app-studentlist> -->
 
-<div *ngIf="api.isLoggedIn">
+
+<div *ngIf="api.isAdminLOgin">
 
   <app-testing></app-testing>
   <!-- <router-outlet></router-outlet> -->
 </div>
-<div *ngIf ="!api.isLoggedIn">
+<div *ngIf="!api.isAdminLOgin">
   <app-logout></app-logout>
 </div>
-<!-- <app-form></app-form> --> 
-<!-- <app-logout></app-logout> -->
-<!-- <app-studentlist></app-studentlist> -->

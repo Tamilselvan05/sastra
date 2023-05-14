@@ -1,4 +1,4 @@
-<div class="mainContent ">
+<div class="mainContent " style="margin-top:15px;">
     <div class="sidenavigate shadow">
         <ul>
             <li class="ml-2" style="list-style-image:url(../assets/home.svg)"><a  routerLink="card">Posts</a></li>
@@ -10,7 +10,7 @@
             <!-- <li class="ml-2" style="list-style-image: url(../assets/logout.svg);"><a routerLink="logout">Logout</a></li> -->
 
             <li *ngIf="api.isAdminLOgin == false" class="ml-2" style="list-style-image: url(../assets/presentall.svg);"><a routerLink="pststudpost">Create Post</a></li>
-            <li class="ml-2" style="list-style-image: url(../assets/tickercheck.svg);"><a routerLink="postliist">Post list</a></li>
+            <li *ngIf="api.isAdminLOgin == false" class="ml-2" style="list-style-image: url(../assets/tickercheck.svg);"><a routerLink="postliist">Post list</a></li>
             <li class="ml-2" style="list-style-image: url(../assets/group.svg);"><a routerLink="register">Register</a></li>
 
             <!-- sting/paststud'

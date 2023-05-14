@@ -6,6 +6,13 @@
             <h2 align="center">Create Post</h2>
             <hr style="background-color:black;">
             <div class="matsize mt-5">
+                <mat-form-field class="field"  appearance="outline">
+                    <mat-label style="font-weight: bold; color: black;">Name</mat-label>
+                    <input matInput placeholder="Enter your name"required  [(ngModel)]="pststudpost.name"/>
+                  </mat-form-field>
+
+            </div>
+            <div class="matsize mt-4">
                 <mat-form-field appearance="outline">
                     <mat-label>Title</mat-label>
                     <input matInput [(ngModel)]="pststudpost.title" placeholder="Placeholder" >

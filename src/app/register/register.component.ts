@@ -9,7 +9,9 @@ import { ApiService } from '../api.service';
 })
 export class RegisterComponent implements OnInit {
   title = 'currentstud';
-  hide = true;
+  hide = false;
+ delete:any
+
   pststudregister = {
     passedOutStudent: "",
     name: "",
@@ -20,9 +22,9 @@ export class RegisterComponent implements OnInit {
     yearOfPassing:"",
     batch:"",
     designation:"",
-    companyName:""
+    companyName:"",
   }
-  
+
   constructor(public api: ApiService) { }
 
   ngOnInit(): void {
@@ -32,11 +34,11 @@ export class RegisterComponent implements OnInit {
   }
 registerForm(){
   console.log(this.pststudregister,'------------')
-  this.api.pastStudRegister(this.pststudregister).subscribe((data: any) => {
-    console.log(data)
-  })
-  
-
+  if(this.pststudregister && this.pststudregister.passedOutStudent){   
+    this.api.pastStudRegister(this.pststudregister).subscribe((data: any) => {
+      console.log(data)
+    })
+  }
   Swal.fire({
     position: 'top-end',
     icon: 'success',
