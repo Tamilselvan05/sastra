@@ -1,23 +1,23 @@
 <!-- <p>paststudlist works!</p> -->
 <!--  -->
 
-        <mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-2">
+        <mat-table [dataSource]="dataSource" class="mat-elevation-z8 mt-2" matSort>
             <!-- Position Column -->
             <ng-container matColumnDef="regNo">
-              <mat-header-cell *matHeaderCellDef > Reg No. </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.regNo}} </mat-cell>
+              <mat-header-cell *matHeaderCellDef > Sno </mat-header-cell>
+              <mat-cell *matCellDef="let element; let i = index"> {{i +1}} </mat-cell>
             </ng-container>
           
             <!-- Name Column -->
             <ng-container matColumnDef="name">
               <mat-header-cell *matHeaderCellDef>Student Name </mat-header-cell>
-              <mat-cell *matCellDef="let element"> <img class="rounded-circle mr-2" src="https://i.imgur.com/0LKZQYM.jpg" width="25"> {{element.name}} </mat-cell>
+              <mat-cell *matCellDef="let element">  {{element.name}} </mat-cell>
             </ng-container>
           
             <!-- Weight Column -->
             <ng-container matColumnDef="yearPassing">
-              <mat-header-cell *matHeaderCellDef> Current Year Student </mat-header-cell>
-              <mat-cell *matCellDef="let element"> {{element.yearPassing}} </mat-cell>
+              <mat-header-cell *matHeaderCellDef> Year of Passing </mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.yearOfPassing}} </mat-cell>
             </ng-container>
           
             <ng-container matColumnDef="batch">
@@ -32,7 +32,7 @@
             <!--  -->
             <ng-container matColumnDef="currentDesignation">
                 <mat-header-cell *matHeaderCellDef> Current Designation </mat-header-cell>
-                <mat-cell *matCellDef="let element"> {{element.currentDesignation}} </mat-cell>
+                <mat-cell *matCellDef="let element"> {{element.designation}} </mat-cell>
               </ng-container>
         <!--  -->
         <ng-container matColumnDef="companyName">
@@ -43,12 +43,12 @@
         <ng-container matColumnDef="Action">
             <mat-header-cell *matHeaderCellDef > Action </mat-header-cell>
             <mat-cell *matCellDef="let element"><span><i class="green-color fa-solid fa-circle-check fa-xl"></i><i
-              class="red-color ml-3 fa-solid fa-circle-xmark fa-xl" (click)="delete(element)"></i></span>  </mat-cell>
+              class="red-color ml-3 fa-solid fa-circle-xmark fa-xl" (click)="deleteApi(element)"></i></span>  </mat-cell>
          
           </ng-container>
           <!--  -->
         
-            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>x
             <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
           </mat-table>
 

@@ -29,6 +29,8 @@ export class TestingComponent implements OnInit {
   loginOut() {
     this.api.isLoggedIn = false;
     this.api.isAdminLOgin = false;
+    localStorage.removeItem("isPassedout");
+    localStorage.removeItem("isCurrent");
 
     this.router.navigate(['/logout'])
     console.log("chkkkkkkkk");

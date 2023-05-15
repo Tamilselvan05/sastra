@@ -2,6 +2,7 @@ import {  OnInit } from '@angular/core';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-studentlist',
@@ -11,7 +12,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class StudentlistComponent implements  AfterViewInit {
   studentElement: any;
 
-  constructor() { }
+  constructor(public api:ApiService ) { }
   displayedColumns: string[] = ['regNo', 'name', 'yearPassing','department', 'Batch'];
   dataSource = new MatTableDataSource<studentElement>(ELEMENT_DATA);
   // headers = ['Reg No.', 'Student name', 'year of passing', 'Batch', 'Department', 'Current Desingnation', 'Company name', 'Action/Reject']
@@ -30,13 +31,6 @@ export class StudentlistComponent implements  AfterViewInit {
   }
 }
 
-// export interface PeriodicElement {
-//   name: string;
-//   position: number;
-//   weight: number;
-//   symbol: string;
-//   // regNo:number;
-// }
 
 
 export interface studentElement {

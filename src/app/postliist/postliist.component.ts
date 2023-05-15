@@ -10,6 +10,7 @@ export class PostliistComponent implements OnInit {
 
   users:any
   user:any
+  // isPassedName = localStorage.getItem('isPassedName');
   constructor(public api:ApiService) { 
 // console.log(api.)
   }
@@ -34,8 +35,11 @@ export class PostliistComponent implements OnInit {
   // delete 
   delete(index: number) {
     this.api.registerDelete().subscribe((data:any)=>{
+      console.log("checked---")
+
+      console.log("check",data)
       this.data.splice(index, 1);
-      this.user = data
+      // this.user = data
       // console.log(this.users.data[0].title,'datachking')
     })
   }

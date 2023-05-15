@@ -22,6 +22,7 @@ public pastStudgetRegister = this.baseUrl + "/user/getAllUserRegister"
 
 public pastStudRegisterUrl = this.baseUrl + "/user/pastStudRegister"
 
+// delete api
 public pastStudRegisterDelete = this.baseUrl + "/user/delete"
 
 public adminLoginUrl= this.baseUrl + "/user/adminLogin"
@@ -76,7 +77,12 @@ paststudgetRegister(){
 }
 currentStudentRegister(currentstud:any){
   return this.http.post<any>(this.currentStudentUrl, currentstud)
-
 }
+
+
+currentStudentGetRegister(currStudGet:any){
+  
+}
+
 
 }

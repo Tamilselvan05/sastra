@@ -29,7 +29,6 @@ export class PaststudComponent implements AfterViewInit {
     
     this.api.paststudgetRegister().subscribe((data:any)=>{
      console.log(data,'ggg')
-    //  this.dataSource = data
     })
 
     
